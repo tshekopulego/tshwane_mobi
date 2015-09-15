@@ -16,7 +16,6 @@ mobileApp.service('appService', function($http){
 			return p.join('&');
 		};
 		
-		  //return $http({
          return $http({
             method: type,
             url: url,

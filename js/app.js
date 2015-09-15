@@ -6,6 +6,7 @@ var serviceApi		= 'http://test.tshwanesafety.co.za/dashboard/';
 var GetServiceApi	= serviceApi+'index.php/';
 
 mobileApp.run(function($rootScope, $timeout, $translate, $location, appService) {
+    
 	$rootScope.footerBadge 	= 0;
 	$rootScope.startPage    = 0;
 
