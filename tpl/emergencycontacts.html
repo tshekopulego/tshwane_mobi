@@ -1,0 +1,27 @@
+<div></br>
+    <p>Select to dial any of the following emergency numbers. Normal call rates apply.</p>
+	
+	<ul class="table-view">
+		<li class="table-view-cell media" ng-repeat="showContact in requestContacts">
+			 <a href='tel:{{ showContact.phone }}'>
+			 
+			 <span class="media-object pull-left icon fa fa-lg fa-phone"></span>
+				<div class="media-body">
+					{{ showContact.name }}
+					<p>{{ showContact.phone }}</p>
+				</div>
+				<!--<span class="media-object pull-left icon fa fa-lg fa-phone"></span>
+				<div class="media-body">
+				<div>
+				
+				<span class="media-object pull-left icon fa fa-lg fa-phone"></span>
+				<span class="media-object pull-left icon fa fa-phone"></span>
+				<!--<img  style="width:20%; height:30%" ng-src="img/{{ showContact.img}}.png" alt="1"/>
+					{{ showContact.name }}{{ showContact.phone }}</div>
+					<!--<div align="center">{{ showContact.phone }}</div>
+				</div>-->
+			</a>
+		</li>
+	</ul>
+</div>
+<br>
