@@ -1,0 +1,16 @@
+<div>
+	<ul class="table-view">
+		<li class="table-view-cell media" ng-repeat="showCategory in requestCategory">
+			<a class="navigate-right" href='#notificationDetail/{{ showCategory.id}}'>
+				<img class="media-object pull-left" width="100" height="100" ng-src="{{ serviceApi }}/notification/img/{{ showCategory.category_img }}"/>
+				<div class="media-body">
+					<label style="color:black" name="book-name" ng-model="bookData.name">{{ showCategory.title }}</label>
+					<p>
+						{{ showCategory.message | characters:55}}
+					</p>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+</br>

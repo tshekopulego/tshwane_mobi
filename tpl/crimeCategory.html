@@ -1,0 +1,15 @@
+<div>
+<!--width="64" height="64"-->
+	<ul class="table-view">
+		<li class="table-view-cell media" ng-repeat="showPromo in requestPromo">
+			<a class="navigate-right" href='#reportIncidentDetail/{{ showPromo.category_id }}/{{ showPromo.category_name }}' >
+			
+				<img style="height:80px; width:auto"  class="media-object pull-left" ng-src="{{ serviceApi }}upload/mobi_icons/{{ showPromo.category_img }}">
+				<div class="media-body"><br>
+					{{ showPromo.category_name }}
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+</br>

@@ -1,0 +1,40 @@
+<div class="content-padded">
+<!--add popup here-->
+	<form>
+		<label><input type="checkbox" ng-model="checkboxModel.value1" ng-true-value="display:none" ng-false-value="text"/> Anonymous tip off</label></br>
+         </br>
+	<select name="crimeTypeCategory" ng-model="register.categorytype">
+	    <option " value=""> {{'load.register.optionType' | translate}} </option>
+            <option ng-repeat="showCat in requestType" value="{{ showCat.type_name }}">{{ showCat.type_name }}</option>
+        </select>
+		
+        <textarea name="details" cols="10" rows="10" ng-model="register.details" placeholder="{{'load.register.inputDetails' | translate}}"></textarea>
+        <div ng-model="reg_container" style="display:none">
+        <button class="btn btn-lg btn-primary"
+        ng-bootbox-title="A cool title!"
+        ng-bootbox-custom-dialog="Some custom text"
+        ng-bootbox-buttons="customDialogButtons"
+        ng-bootbox-class-name="some-class">
+        Custom dialog</button>
+        </div>
+	
+        <button ng-click="getPhoto()" class="btn btn-primary btn-block" multiple><span class="fa fa-camera"></span> {{'load.register.btnAddPicture' | translate}}</button>
+        	
+         <button ng-click="getVideo()" class="btn btn-primary btn-block"><span class="fa fa-video-camera"></span> {{'load.register.btnAddVideo' | translate}}</button>
+	   <!-- <button ng-click="getSound()" class="btn btn-primary btn-block"><span class="fa fa-volume-down"></span> {{'load.register.btnAddAudio' | translate}}</button>-->
+		
+	
+	<div ng-model="reg_container" style="{{checkboxModel.value1}}">
+		<input type="text" ng-model="register.name" placeholder="{{'load.register.inputName' | translate}}" >
+		<input type="tel" ng-model="register.mobile" placeholder="{{'load.register.inputPhone' | translate}}" maxlength="10" >
+	</div>
+		
+<!--button ng-click="getLocation()" class="btn btn-primary btn-block"><span class="fa fa-map-marker fa-fw"></span> {{'load.register.btnLocation' | translate}}</button>-->
+		
+		<input type="text" ng-model="register.address" placeholder="{{'load.register.inputLocation' | translate}}">
+		
+<button ng-click="goReportCrime()" class="btn btn-positive btn-block"><span class="fa fa-pencil-square-o fa-fw"></span> {{'load.register.btnSubmit' | translate}} </button>
+	
+	
+	</form>
+</div>
